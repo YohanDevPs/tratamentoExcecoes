@@ -1,4 +1,4 @@
-# Este é um código desenvolvido com Java para treinar tratamento de exceções
+# Este é um código desenvolvido com Java para treinar tratamento de exceções e Orientação a Objeto
 
 
 O código deve ler os dados de uma conta bancária e depois realizar um 
