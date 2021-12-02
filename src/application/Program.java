@@ -1,40 +1,36 @@
 package application;
 
-import java.util.Locale;
 import java.util.Scanner;
 
 import model.entities.Account;
-import model.exception.DomainException;
+import model.exception.BusinessEception;
 
 public class Program {
 
 public static void main(String[] args) {
-		
-		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Informe os dados da conta");
-		System.out.print("Numero: ");
+		System.out.println("Enter account data");
+		System.out.print("Number: ");
 		int number = sc.nextInt();
-		System.out.print("Titular: ");
+		System.out.print("Holder: ");
 		sc.nextLine();
 		String holder = sc.nextLine();
-		System.out.print("Saldo inicial: ");
+		System.out.print("Initial balance: ");
 		double balance = sc.nextDouble();
-		System.out.print("Limite de saque: ");
-		double withdrawLimit = sc.nextDouble();
-
-		Account acc = new Account(number, holder, balance, withdrawLimit);
+		System.out.print("Withdraw limit: ");
+		double whithdrawLimit = sc.nextDouble();
+		
+		Account acc = new Account(number, holder, balance, whithdrawLimit);
 		
 		System.out.println();
-		System.out.print("Informe uma quantia para sacar: ");
-		double amount = sc.nextDouble();
+		System.out.print("Enter amount for withdraw: ");
 		
 		try {
-			acc.withdraw(amount);
-			System.out.printf("Novo saldo: %.2f%n", acc.getBalance());
+			acc.withdraw(sc.nextDouble());
+			System.out.printf("New balance: %.2f", acc.getBalance());
 		}
-		catch (DomainException e) {
+		catch(BusinessEception e) {
 			System.out.println(e.getMessage());
 		}
 		
