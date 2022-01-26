@@ -1,6 +1,14 @@
-# Este é um código desenvolvido com Java para treinar tratamento de exceções e Orientação a Objeto
+## Projeto - Primeiro portifolio, DIO
+
+### Este é um código em Java desenvolvido com o uso de orientação a objeto e tratamento de exceção, e simula algumas operações de um banco.
+
+As operações são:
+
+* Entrada de dados de identificação do cliente;
+* Definição do limite de saque;
 
 
-O código deve ler os dados de uma conta bancária e depois realizar um 
-saque, monstrando um novo saldo.
-O programa foi feito para tratar estes erros: saque sem saldo na conta e saque superior ao limite estipulado.
+O tratamento de exceção previne:
+
+* Saque sem saldo suficiente;
+* Saque quando exceder o limite estipulado.
